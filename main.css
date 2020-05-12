@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+text-align: center;
+align-items: center;
+justify-content: center;
+height: 100vh;
+font-family: 'Bungee Shade', cursive;
+background-color:#1B1B1B;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #52b7e9;
+    width:500px;
+    height: 450px;
+    border-radius: 25px;
+    position: relative;
+
+    
+}
+/* #disco{
+    animation-name: disco;
+    animation-duration: 8s;
+}
+
+@keyframes disco{
+    0%{
+        background-color:#97ebdb;
+        top:0px;
+    }
+    30%{
+        background-color: #00c2c7;
+        top: 30px;
+    }
+    60%{
+        background-color: #0086ad;
+        top:60px;
+    }
+    100%{
+        background-color: #005582;
+        top: 0px;
+    }
+}
+ */
+/* the title */
+
+h1 {
+    margin:;
+    width: 300px;
+    height: 80px;
+    font-size: 35px;
+    font-family: 'Bungee Shade', cursive;
+
+}
+/* the reset button */
+
+#reset {
+    width:50px;
+    height: 30px;
+    border-radius: 25px;
+    font-family: 'Bungee Shade', cursive;
+    cursor: pointer;
+    
+}
+
+/* the player status */
+
+.game-status{
+
+    width: 80px;
+    height: 50px;
+   
+} 
+/* the 9 small boxes */
+
+
+.boxes {
+
+    background-color:#f1f1f1;
+    height: 100px;
+    width: 30%;
+    margin:3px;
+    margin-top:0em;
+    border-radius: 40px;
+    cursor: pointer;
+}
