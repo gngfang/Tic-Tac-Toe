@@ -17,6 +17,7 @@ background-color:#1B1B1B;
 
 .container {
     display: flex;
+    margin: auto;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -55,30 +56,36 @@ background-color:#1B1B1B;
 /* the title */
 
 h1 {
-    margin:;
     width: 300px;
     height: 80px;
+    margin:auto;
+    margin-top:100px;
     font-size: 35px;
     font-family: 'Bungee Shade', cursive;
+    color:#f1f1f1;
 
 }
 /* the reset button */
+button{
 
-#reset {
     width:50px;
     height: 30px;
     border-radius: 25px;
     font-family: 'Bungee Shade', cursive;
     cursor: pointer;
-    
+    margin:auto;
+    margin-top:0px;
+    margin-bottom:30px;
+
 }
 
 /* the player status */
 
 .game-status{
-
-    width: 80px;
+    color:#f1f1f1;
+    width: 100px;
     height: 50px;
+    margin:auto;
    
 } 
 /* the 9 small boxes */
@@ -93,4 +100,10 @@ h1 {
     margin-top:0em;
     border-radius: 40px;
     cursor: pointer;
+}
+
+
+.boxes::after{
+    content:"",
+
 }
