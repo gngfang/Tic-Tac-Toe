@@ -204,3 +204,5 @@ $('#bottom-right').on("click", function () {
     seven.bottomRight = 'x';
     winningState();
 })
+
+

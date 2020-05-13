@@ -102,8 +102,3 @@ button{
     cursor: pointer;
 }
 
-
-.boxes::after{
-    content:"",
-
-}
