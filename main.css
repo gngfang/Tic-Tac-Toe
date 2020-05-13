@@ -81,7 +81,7 @@ button{
 
 /* the player status */
 
-.game-status{
+.playerStatus{
     color:#f1f1f1;
     width: 100px;
     height: 50px;
@@ -101,4 +101,10 @@ button{
     border-radius: 40px;
     cursor: pointer;
 }
+
+.boxes:hover{
+    background-color: bisque;
+}
+
+
 
