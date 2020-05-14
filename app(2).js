@@ -5,7 +5,6 @@
 let player1 = 'x';
 let player2 = 'o';
 let turnCount = 1;
-let game = true;
 
 
 /* Container in Jquery */

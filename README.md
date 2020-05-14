@@ -3,17 +3,39 @@
 
 ![](tictactoe_wireframe.png)
 
+Tic Tac Toe a basic and classic game that everyone has played when they were kid. 
 
 # User Story
-* Game will have two player, player x and player o
-* The container will have in total of 9 spaces to play with
-* to start the game the player x, will just need to click any of the available square to mark the x symbol to it
-* after player x marked will be the player o turn
-* player o turn also just need to click into the available square to mark the o symbol to it.
-* player won't be able to click the same that is marked down
-* if the player x can get 3 consecutive line before the player o, player x  will be announced as the winner.
-* if the player o can get 3 consecutive line before the player x, player o will be announced as the winner.
-* if there is no space available and no player got 3 symbol connected, the game will be announced as tie.
-* after winning the game, tie or to re-play the game, player just need to click the reset button.
-* reset button will reset the game and player can play again
+
+* Game will have two player, player X and player O.
+* The box container will contain a total of 9 square spaces to play with.
+* To start the game the player X, will just need to click any of the available square to mark the X symbol to it.
+* After player X marked, player O take the next turn.
+* Player O will just need to click any other available square space.
+* Players won't be able to click the squares that have been marked.
+* If player X can get 3 consecutive line before the player O, player X will be announced as the winner.
+* If player O can get 3 consecutive line before the player X, player O will be announced as the winner.
+* If there is no space available and no player got 3 symbol connected, the game will be announced as tie.
+* Reset button will reset the game and player can play again.
 * Enjoy !
+
+
+# MVP
+
+* Two Player
+* Square Clickable
+* Can mark the square based on the player
+* Player can take turn
+* Reset button can reset the game
+* There is a winner
+* There is a tie game
+
+# Stretch Goal
+
+* some css style for the winner
+* able to play with cpu (could not make it)
+* able to choose player (could not make it)
+
+# Final Product
+
+![](final_product.png)
