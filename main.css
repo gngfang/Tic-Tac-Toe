@@ -21,7 +21,7 @@ background-color:#1B1B1B;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    background-color: #52b7e9;
+    background-color: #588da8;
     width:500px;
     height: 450px;
     border-radius: 25px;
@@ -68,38 +68,48 @@ h1 {
 /* the reset button */
 button{
 
-    width:50px;
-    height: 30px;
+    width:60px;
+    height: 40px;
     border-radius: 25px;
     font-family: 'Bungee Shade', cursive;
     cursor: pointer;
     margin:auto;
     margin-top:0px;
     margin-bottom:30px;
+    color: #1f1f1f;
+
+}
+
+button:hover{
+    background-color: #C02739;
 
 }
 
 /* the player status */
 
 .playerStatus{
-    color:#f1f1f1;
-    width: 100px;
-    height: 50px;
     margin:auto;
+    color:#f1f1f1;
+    width: 200px;
+    height: 70px;
+    margin-bottom: 10px;
+    font-size:20px;
    
 } 
 /* the 9 small boxes */
 
 
 .boxes {
-
+    font-size: 3em;
     background-color:#f1f1f1;
     height: 100px;
     width: 30%;
     margin:3px;
     margin-top:0em;
     border-radius: 40px;
+    padding:20px;
     cursor: pointer;
+    text-align: center;
 }
 
 .boxes:hover{
@@ -107,4 +117,11 @@ button{
 }
 
 
+.x {
+    color:#483D8B;
 
+}
+
+.o {
+    color:#ecce6d;
+}

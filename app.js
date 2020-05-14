@@ -57,7 +57,8 @@ const eight = {
 
 
 const winningState = () => {
-    if (first.topLeft == 'x' && first.topMiddle == 'x' && first.topRight == 'x') {
+
+    if (first.topLeft == '' && first.topMiddle == '' && first.topRight == '') {
         alert("you won");
     } else if (second.middleLeft == 'x' && second.middleMiddle == 'x' && second.middleRight == 'x') {
         alert('you won the game with the second way');
