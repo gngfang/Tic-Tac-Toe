@@ -11,6 +11,8 @@ let game = true;
 /* Container in Jquery */
 
 const $container = $('.container');
+const $box = $('.boxes');
+const $playerStatus = $('.playerStatus');
 
 /* The grid boxes in Jquery */
 const $box1 = $('#top-left');
@@ -24,6 +26,7 @@ const $box8 = $('#bottom-middle');
 const $box9 = $('#bottom-right');
 
 
+/* reset button */
 
 
 const gameFunctions = function (event) {
@@ -121,19 +124,19 @@ const gameFunctions = function (event) {
     }
 
 }
+const resetGame = () => {
 
 
+    $('div').removeClass("x");
+    $('div').removeClass("o");
+    $(".boxes").empty();
+    $(".playerStatus").empty();
+    $(".playerStatus").text("Player X Start the Game");
+    turnCount = 1;
+
+};
 
 
-
-
-
-
-
-/* reset button */
-$('#reset').on("click", function () {
-    alert("is working");
-});
-
+$('#reset').on("click", resetGame)
 // event listener
 $container.on("click", '.boxes', gameFunctions);
