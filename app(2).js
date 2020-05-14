@@ -152,7 +152,7 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#483D8B');
         $('.playerStatus').css('font-size', '30px');
 
-    } else if ($box3.text() === 'o' && $box5.text() === 'o' && $box7.text() === 'o  ') {
+    } else if ($box3.text() === 'o' && $box5.text() === 'o' && $box7.text() === 'o') {
         $('.playerStatus').text("Player O Won");
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
