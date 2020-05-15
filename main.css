@@ -84,24 +84,7 @@ button:hover{
     background-color: #C02739;
 
 }
-h4{
-    color:#f1f1f1;
-}
 
-li{
-    width: 200px;
-    height: 200px;
-    color: #f1f1f1;;
-    margin-left: 40px;
-}
-
-.instruction {
-    width:250px;
-    height: 200px;
-    background-color:red;
-    margin-right: 40px;
-
-}
 /* the player status */
 
 .playerStatus{

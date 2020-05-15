@@ -25,7 +25,8 @@ const $box8 = $('#bottom-middle');
 const $box9 = $('#bottom-right');
 
 
-/* reset button */
+
+
 
 
 const gameFunctions = function (event) {
@@ -56,13 +57,17 @@ const gameFunctions = function (event) {
         $('.playerStatus').text('Player X Turn');
         console.log('o player');
     }
+    if (turnCount === 10) {
+        $('.playerStatus').text("Tie Game");
+        $('.playerStatus').css('font-size', '30px');
+        $('.playerStatus').css('color', '#996600');
+        console.log('TIE GAME');
+    }
 
 }
 
 
-
-
-const winningCheck = () => {
+function winningCheck() {
 
     if ($box1.text() === 'x' && $box2.text() === 'x' && $box3.text() === 'x') {
 
@@ -77,7 +82,10 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
+
     }
+
+
 
     if ($box4.text() === 'x' && $box5.text() === 'x' && $box6.text() === 'x') {
 
@@ -93,6 +101,8 @@ const winningCheck = () => {
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
     }
+
+
 
     if ($box7.text() === 'x' && $box8.text() === 'x' && $box9.text() === 'x') {
         $('.playerStatus').text('Player X Won');
@@ -118,7 +128,7 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
-    };
+    }
 
     if ($box2.text() === 'x' && $box5.text() === 'x' && $box8.text() === 'x') {
 
@@ -131,7 +141,7 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
-    };
+    }
 
     if ($box3.text() === 'x' && $box6.text() === 'x' && $box9.text() === 'x') {
 
@@ -145,7 +155,7 @@ const winningCheck = () => {
         $('.playerStatus').css('font-size', '30px');
         $('.playerStatus').text("Player O Won");
         $('.boxes').css('pointer-events', "none");
-    };
+    }
 
     if ($box1.text() === 'x' && $box5.text() === 'x' && $box9.text() === 'x') {
 
@@ -158,7 +168,7 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
-    };
+    }
 
     if ($box3.text() === 'x' && $box5.text() === 'x' && $box7.text() === 'x') {
 
@@ -172,14 +182,15 @@ const winningCheck = () => {
         $('.playerStatus').css('color', '#ecce6d');
         $('.playerStatus').css('font-size', '30px');
         $('.boxes').css('pointer-events', "none");
-    };
 
+    }
 
 }
 
 
 
-const resetGame = () => {
+
+function resetGame() {
 
     // reseting the playerStatus
     $(".playerStatus").empty();
@@ -202,7 +213,11 @@ const resetGame = () => {
 };
 
 
+
 // event listener
 $('#reset').on("click", resetGame);
 $container.on("click", '.boxes', gameFunctions);
 $container.on('click', '.boxes', winningCheck);
+
+
+
