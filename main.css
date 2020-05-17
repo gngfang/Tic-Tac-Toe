@@ -78,10 +78,21 @@ button{
     margin-bottom:30px;
     color: #1f1f1f;
 
+
 }
 
 button:hover{
     background-color: #C02739;
+
+}
+
+#nextTurn{
+
+    margin-right: 20px;
+    margin-bottom: 40px;
+   
+
+
 
 }
 
@@ -124,4 +135,33 @@ button:hover{
 
 .o {
     color:#ecce6d;
+}
+
+h3{
+    margin: 15px;
+}
+
+ .playerScore1 {
+    color: #483D8B;
+    font-size: 20px;
+
+}
+ .playerScore2 {
+    color: #ecce6d;
+    font-size: 20px;
+
+}
+
+@media only screen
+and (min-device-width:414px)
+and(max-device-width:736px)
+and(-webkit-min-device-pixel-ratio:3){
+
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
 }

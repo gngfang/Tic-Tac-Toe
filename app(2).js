@@ -5,6 +5,8 @@
 let player1 = 'x';
 let player2 = 'o';
 let turnCount = 1;
+let scoreBoardX = 0;
+let scoreBoardO = 0;
 
 
 /* Container in Jquery */
@@ -25,7 +27,10 @@ const $box8 = $('#bottom-middle');
 const $box9 = $('#bottom-right');
 
 
+/* playerScore jqueries */
 
+const $playerScore1 = $('.playerScore1');
+const $playerScore2 = $('.playerScore2');
 
 
 
@@ -62,132 +67,190 @@ const gameFunctions = function (event) {
         $('.playerStatus').css('font-size', '30px');
         $('.playerStatus').css('color', '#996600');
         console.log('TIE GAME');
+
+    }
+
+
+}
+
+function scoreBoard() {
+
+    scoreBoardX++
+    $('.playerStatus').text('Player X Won');
+    $('.playerStatus').css('color', '#483D8B');
+    $('.playerStatus').css('font-size', '30px');
+    $('.boxes').css('pointer-events', "none");
+    $playerScore1.text(`Player X Score : ${scoreBoardX}`);
+    if (scoreBoardX === 3) {
+        $('.playerStatus').text('Player O is the LOSERR');
+        $('.playerStatus').css('font-size', '25px');
+        $('#nextTurn').css('pointer-events', 'none');
+    } else if (scoreBoardO === 3) {
+        $('.playerStatus').text('Player X is the LOSERR');
+        $('.playerStatus').css('font-size', '25px');
+        $('.playerStatus').css('color', '#ecce6d');
+        $('#nextTurn').css('pointer-events', 'none');
+    }
+
+
+};
+
+
+
+
+function scoreBoard2() {
+
+    scoreBoardO++
+    $('.playerStatus').text("Player O Won");
+    $('.playerStatus').css('color', '#ecce6d');
+    $('.playerStatus').css('font-size', '30px');
+    $('.boxes').css('pointer-events', "none");
+    $playerScore2.text(`Player O Score : ${scoreBoardO}`);
+    if (scoreBoardX === 3) {
+        $('.playerStatus').text('Player O is the LOSERR');
+        $('.playerStatus').css('font-size', '25px');
+        $('#nextTurn').css('pointer-events', 'none');
+    } else if (scoreBoardO === 3) {
+        $('.playerStatus').text('Player X is the LOSERR');
+        $('.playerStatus').css('font-size', '25px');
+        $('.playerStatus').css('color', '#ecce6d');
+        $('#nextTurn').css('pointer-events', 'none');
     }
 
 }
+
+
 
 
 function winningCheck() {
 
     if ($box1.text() === 'x' && $box2.text() === 'x' && $box3.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none")
+        scoreBoard();
+
 
     } else if ($box1.text() === 'o' && $box2.text() === 'o' && $box3.text() === 'o') {
 
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+        scoreBoard2();
+        nextRound();
 
     }
 
-
-
     if ($box4.text() === 'x' && $box5.text() === 'x' && $box6.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
 
     } else if ($box4.text() === 'o' && $box5.text() === 'o' && $box6.text() === 'o') {
 
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
     }
 
 
 
     if ($box7.text() === 'x' && $box8.text() === 'x' && $box9.text() === 'x') {
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
     } else if ($box7.text() === 'o' && $box8.text() === 'o' && $box9.text() === 'o') {
 
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
     }
 
     if ($box1.text() === 'x' && $box4.text() === 'x' && $box7.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
+
     } else if ($box1.text() === 'o' && $box4.text() === 'o' && $box7.text() === 'o') {
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
     }
 
     if ($box2.text() === 'x' && $box5.text() === 'x' && $box8.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
+
     } else if ($box2.text() === 'o' && $box5.text() === 'o' && $box8.text() === 'o') {
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
     }
 
     if ($box3.text() === 'x' && $box6.text() === 'x' && $box9.text() === 'x') {
 
 
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.playerStatus').text('Player X Won');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
+
     } else if ($box3.text() === 'o' && $box6.text() === 'o' && $box9.text() === 'o') {
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.playerStatus').text("Player O Won");
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
     }
 
     if ($box1.text() === 'x' && $box5.text() === 'x' && $box9.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+        scoreBoard();
+
+
+
     } else if ($box1.text() === 'o' && $box5.text() === 'o' && $box9.text() === 'o') {
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
     }
 
     if ($box3.text() === 'x' && $box5.text() === 'x' && $box7.text() === 'x') {
 
-        $('.playerStatus').text('Player X Won');
-        $('.playerStatus').css('color', '#483D8B');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard();
+
+
 
     } else if ($box3.text() === 'o' && $box5.text() === 'o' && $box7.text() === 'o') {
-        $('.playerStatus').text("Player O Won");
-        $('.playerStatus').css('color', '#ecce6d');
-        $('.playerStatus').css('font-size', '30px');
-        $('.boxes').css('pointer-events', "none");
+
+        scoreBoard2();
+
+
 
     }
 
 }
 
+function nextRound() {
 
+    $(".playerStatus").empty();
+    $(".playerStatus").text("Player X Start the New Round");
+    $('.playerStatus').css("color", "#f1f1f1");
+    $('.playerStatus').css('font-size', '20px');
+    $(".boxes").empty();
+    $('div').removeClass("x");
+    $('div').removeClass("o");
+    $('div').css('pointer-events', 'auto');
+    turnCount = 1;
+
+}
 
 
 function resetGame() {
@@ -208,16 +271,21 @@ function resetGame() {
     turnCount = 1;
     // removing the not clickable using div to enable it through the parent
     $('div').css('pointer-events', 'auto');
-
-
+    $('.playerScore1').text('Player X Score : 0');
+    $('.playerScore2').text('Player O Score : 0');
+    scoreBoardX = 0;  //.text(`Player X Score : ${scoreBoardX}`);
+    scoreBoardO = 0; //.text(`Player O Score : ${scoreBoardO}`);
+    $('#nextTurn').css('pointer-events', 'auto');
 };
 
 
 
 // event listener
+$('#nextTurn').on("click", nextRound);
 $('#reset').on("click", resetGame);
 $container.on("click", '.boxes', gameFunctions);
 $container.on('click', '.boxes', winningCheck);
+
 
 
 
