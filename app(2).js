@@ -27,6 +27,7 @@ const $box8 = $('#bottom-middle');
 const $box9 = $('#bottom-right');
 
 
+
 /* playerScore jqueries */
 
 const $playerScore1 = $('.playerScore1');
